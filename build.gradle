@@ -1,0 +1,27 @@
+plugins {
+    id 'java'
+}
+
+group = 'gg.tomas.avaria'
+version = '1.0.0'
+sourceCompatibility = JavaVersion.VERSION_21
+
+task sourcesJar(type: Jar, dependsOn: classes) {
+    from sourceSets.main.allSource
+    archiveClassifier.set('sources')
+}
+
+repositories {
+    mavenCentral()
+    maven { url 'https://repo.papermc.io/repository/maven-public/' }
+}
+
+dependencies {
+    compileOnly 'io.papermc.paper:paper-api:1.21.3-R0.1-SNAPSHOT'
+}
+
+jar {
+    manifest {
+        attributes 'Main-Class': 'gg.tomas.avaria.Main'
+    }
+}
