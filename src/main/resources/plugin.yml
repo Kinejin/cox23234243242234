@@ -1,0 +1,11 @@
+name: AutoridadDeLaAvaricia
+main: gg.tomas.avaria.Main
+version: 1.0.0
+api-version: "1.21.3"
+commands:
+  avaricia:
+    description: Otorga un Gen de la Bruja
+    permission: avaricia.admin
+permissions:
+  avaricia.admin:
+    default: op
